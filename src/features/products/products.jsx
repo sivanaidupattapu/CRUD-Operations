@@ -25,7 +25,7 @@ function Product() {
         }
         <ul>
             {isLoading === false && (
-                data.map(p => { return <li>Title : {p.title}</li> })
+                data?.map(p => { return <li>Title : {p.title}</li> })
             )}
         </ul>
     </div>

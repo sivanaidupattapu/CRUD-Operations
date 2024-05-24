@@ -24,10 +24,10 @@ function Countries() {
         }
         <ul>
             {isLoading === false && (
-                countries?.map(c => {
+                countries?.map((c,i) => {
                     return <div>
                         {/* <img src={c.flags[1]} alt="" width='100px' /> */}
-                        <li>{c.name.common}</li>
+                        <li key={i}>{c.name.common}</li>
                     </div>
                 })
             )}

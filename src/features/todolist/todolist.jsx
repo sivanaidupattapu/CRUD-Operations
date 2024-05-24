@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, delTodo} from "./todolistslice";
+import { addTodo, delTodo,dontodo } from "./todolistslice";
 import { useState } from "react";
 function Todo() {
     let [newtodo, setNewtodo] = useState('')
@@ -15,9 +15,11 @@ function Todo() {
             <button className="btn btn-primary m-1" onClick={() => { dispatch(addTodo(newtodo)) }}>Add Todo</button>
             {
                 todos?.map((list, i) => {
-                    return <li>{list}
+                    return <li key={i}>{list}
+                        <button className="btn btn-success m-1" onClick={() => { dispatch(dontodo()) }}>Done</button>
                         <button className="btn btn-danger m-1"
-                            onClick={() => { dispatch(delTodo(i)) }}>Delete</button></li>
+                            onClick={() => { dispatch(delTodo(i)) }}>Delete</button>
+                    </li>
                 })
             }
         </div>

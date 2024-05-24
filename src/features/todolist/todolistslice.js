@@ -11,8 +11,11 @@ export const todolistSlice = createSlice({
         },
         delTodo:(state,action)=>{
             state.todos.splice(action.payload,1)
+        },
+        dontodo:(state,action)=>{
+            state.todos(action.payload)
         }
     }
 })
-export const {addTodo,delTodo} =todolistSlice.actions;
+export const {addTodo,delTodo,dontodo} =todolistSlice.actions;
 export default todolistSlice.reducer

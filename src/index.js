@@ -5,11 +5,58 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Todo from './features/todolist/todolist';
+import Counter from './features/counter/counter';
+import Posts from './features/post/post';
+import Product from './features/products/products';
+import Countries from './features/countries/countries';
+import Addpost from './features/post/addpost';
+import Editpost from './features/post/editpost';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App></App>,
+    children:[
+      {
+        path: "/todolist",
+        element: <Todo></Todo>
+      },
+      {
+        path: "/counter",
+        element:<Counter></Counter>
+      },
+      {
+        path:"/posts",
+        element:<Posts></Posts>
+      },
+      {
+        path:"/products",
+        element:<Product></Product>
+      },
+      {
+        path:"/countries",
+        element:<Countries></Countries>
+      },
+      {
+        path:"/addPost",
+        element:<Addpost></Addpost>
+      },
+      {
+        path:"/editpost",
+        element:<Editpost></Editpost>
+      }
+    ]
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <App/>
+    <RouterProvider router={router}></RouterProvider>
   </Provider>
 );
 
