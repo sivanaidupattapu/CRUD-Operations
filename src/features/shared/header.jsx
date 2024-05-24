@@ -14,16 +14,16 @@ function Header() {
                             <Link class="nav-link active" to="/counter">Counter</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to="/posts">Posts</Link>
+                            <Link class="nav-link active" to="/products">Products</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to="/products">Products</Link>
+                            <Link class="nav-link active" to="/countries">Countries</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to="/countries">Countries</Link>
+                            <Link class="nav-link active" to="/posts">Posts</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to="/addPost">Add Post</Link>
+                            <Link class="nav-link active" to="/addPost">Add Newpost</Link>
                         </li>
                     </ul>
                 </div>
