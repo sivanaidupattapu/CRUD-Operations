@@ -29,7 +29,8 @@ function Posts() {
                     <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
                     <span role="status">Loading...</span>
                 </button>
-                : <table className="table table-bordered border-2 border-dark w-50">
+                : <div className="d-flex justify-content-center">
+                    <table className="table table-bordered border-2 border-dark w-50">
                     <thead className="text-center">
                         <tr>
                         <th  style={{color:'purple'}}>Title</th>
@@ -53,6 +54,7 @@ function Posts() {
                         }
                     </tbody>
                 </table>
+                </div>
                 // <li key={i}>{t.title}-{t.author}
                 //     <button className="btn btn-primary m-1"
                 //         onClick={() => { editpost(t) }}>Edit</button>
