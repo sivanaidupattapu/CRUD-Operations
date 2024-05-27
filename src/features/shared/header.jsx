@@ -25,6 +25,12 @@ function Header() {
                         <li class="nav-item">
                             <Link class="nav-link active" to="/addPost">Add Newpost</Link>
                         </li>
+                        <li class="nav-item">
+                            <Link class="nav-link active" to="/courses">Courses</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link class="nav-link active" to="/addcourse">Add Course</Link>
+                        </li>
                     </ul>
                 </div>
             </div>

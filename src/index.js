@@ -16,6 +16,9 @@ import Product from './features/products/products';
 import Countries from './features/countries/countries';
 import Addpost from './features/post/addpost';
 import Editpost from './features/post/editpost';
+import Courses from './features/courses/courses';
+import Addcourse from './features/courses/addcourse';
+import Editcourse from './features/courses/editcourse';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,6 +51,18 @@ const router = createBrowserRouter([
       {
         path:"/editpost",
         element:<Editpost></Editpost>
+      },
+      {
+        path:'/courses',
+        element:<Courses></Courses>
+      },
+      {
+        path:'/addcourse',
+        element:<Addcourse></Addcourse>
+      },
+      {
+        path:'/editcourse',
+        element:<Editcourse></Editcourse>
       }
     ]
   },
